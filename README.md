@@ -66,10 +66,15 @@
 2. **Dart** (version 2.17.0 or higher)
 3. **Android Studio** or **VS Code** with Flutter extension
 4. **Git** for version control
-
-### Installation Steps | مراحل نصب
-
-1. **Clone the repository**
-```bash
+   
 git clone https://github.com/yourusername/ninja-trips.git
 cd ninja-trips
+
+<img width="271" height="561" alt="Screenshot 2025-12-04 231133" src="https://github.com/user-attachments/assets/5f38181d-1b2f-40de-a93d-a282e99ac9d7" />
+<img width="277" height="573" alt="Screenshot 2025-12-04 231508" src="https://github.com/user-attachments/assets/eb2f01fb-1c24-4b56-826a-eef66393ee7d" />
+<img width="276" height="564" alt="Screenshot 2025-12-04 231444" src="https://github.com/user-attachments/assets/0f8c9f77-a7c8-4c4c-9502-4724031b74cf" />
+<img width="278" height="564" alt="Screenshot 2025-12-04 231422" src="https://github.com/user-attachments/assets/a1d7a97f-bba8-4803-92c8-aa5765fdc78a" />
+<img width="275" height="563" alt="Screenshot 2025-12-04 231343" src="https://github.com/user-attachments/assets/c31091c8-1d90-4971-b142-18ab281eaecb" />
+<img width="273" height="568" alt="Screenshot 2025-12-04 231303" src="https://github.com/user-attachments/assets/b8f5f57a-7265-43ba-8036-b54e929213e3" />
+<img width="271" height="556" alt="Screenshot 2025-12-04 231246" src="https://github.com/user-attachments/assets/12557eef-aae9-442b-a92a-4b6c0498b367" />
+<img width="277" height="563" alt="Screenshot 2025-12-04 231223" src="https://github.com/user-attachments/assets/36553e5f-9cd4-41de-be08-bd0796618439" />
