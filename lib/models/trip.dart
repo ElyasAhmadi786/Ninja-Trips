@@ -2,36 +2,49 @@ import 'package:trips/utils/language_manager.dart';
 
 class Trip {
   final String id;
-  final String title;
-  final String description;
+  final String titleEn;
+  final String titleFa;
+  final String descriptionEn;
+  final String descriptionFa;
   final double price;
   final int nights;
   final String img;
   final double rating;
   final String category;
-  final String location;
-  final List<String> features;
+  final String locationEn;
+  final String locationFa;
+  final List<String> featuresEn;
+  final List<String> featuresFa;
   final bool isPopular;
 
   Trip({
     required this.id,
-    required this.title,
-    required this.description,
+    required this.titleEn,
+    required this.titleFa,
+    required this.descriptionEn,
+    required this.descriptionFa,
     required this.price,
     required this.nights,
     required this.img,
     this.rating = 4.5,
     required this.category,
-    required this.location,
-    required this.features,
+    required this.locationEn,
+    required this.locationFa,
+    required this.featuresEn,
+    required this.featuresFa,
     this.isPopular = false,
   });
+
+  String get title => LanguageManager.currentLanguage == 'fa' ? titleFa : titleEn;
+  String get description => LanguageManager.currentLanguage == 'fa' ? descriptionFa : descriptionEn;
+  String get location => LanguageManager.currentLanguage == 'fa' ? locationFa : locationEn;
+  List<String> get features => LanguageManager.currentLanguage == 'fa' ? featuresFa : featuresEn;
 
   String get formattedPrice => '\$${price.toInt()}';
 
   String get durationText {
     if (LanguageManager.currentLanguage == 'fa') {
-      return '$nights ${nights > 1 ? 'شب' : 'شب'}';
+      return '$nights شب';
     }
     return '$nights ${nights > 1 ? 'nights' : 'night'}';
   }

@@ -1,124 +1,156 @@
 import 'package:trips/models/trip.dart';
-import 'package:trips/utils/language_manager.dart';
 
-List<Trip> tripList = [
+final List<Trip> tripList = [
   Trip(
     id: '1',
-    title: LanguageManager.currentLanguage == 'fa' ? 'بهشت ساحلی' : 'Beach Paradise',
-    description: LanguageManager.currentLanguage == 'fa'
-        ? 'تجربه تعطیلات ساحلی نهایی با آب‌های زلال، سواحل شنی سفید و هتل‌های لوکس. مناسب برای علاقه‌مندان به استراحت و ورزش‌های آبی.'
-        : 'Experience the ultimate beach vacation with crystal clear waters, white sandy beaches, and luxurious resorts. Perfect for relaxation and water sports enthusiasts.',
+    titleEn: 'Beach Paradise',
+    titleFa: 'بهشت ساحلی',
+    descriptionEn:
+        'Experience the ultimate beach vacation with crystal clear waters, white sandy beaches, and luxurious resorts. Perfect for relaxation and water sports enthusiasts.',
+    descriptionFa:
+        'تجربه تعطیلات ساحلی نهایی با آب‌های زلال، سواحل شنی سفید و هتل‌های لوکس. مناسب برای علاقه‌مندان به استراحت و ورزش‌های آبی.',
     price: 350,
     nights: 3,
     img: 'beach.png',
     rating: 4.8,
     category: 'Beach',
-    location: LanguageManager.currentLanguage == 'fa' ? 'مالدیو' : 'Maldives',
-    features: LanguageManager.currentLanguage == 'fa'
-        ? ['همه چیز شامل', 'ساحل خصوصی', 'اسپا', 'ورزش‌های آبی']
-        : ['All Inclusive', 'Private Beach', 'Spa', 'Water Sports'],
+    locationEn: 'Maldives',
+    locationFa: 'مالدیو',
+    featuresEn: ['All Inclusive', 'Private Beach', 'Spa', 'Water Sports'],
+    featuresFa: ['همه چیز شامل', 'ساحل خصوصی', 'اسپا', 'ورزش‌های آبی'],
     isPopular: true,
   ),
   Trip(
     id: '2',
-    title: LanguageManager.currentLanguage == 'fa' ? 'پناهگاه کوهستانی' : 'Mountain Retreat',
-    description: LanguageManager.currentLanguage == 'fa'
-        ? 'به کوهستان پناه ببرید برای هوای تازه، مسیرهای کوهنوردی و مناظر نفس‌گیر. کلبه‌های دنج و ماجراجویی‌های فضای باز در انتظار شماست.'
-        : 'Escape to the mountains for fresh air, hiking trails, and breathtaking views. Cozy cabins and outdoor adventures await.',
+    titleEn: 'Mountain Retreat',
+    titleFa: 'پناهگاه کوهستانی',
+    descriptionEn:
+        'Escape to the mountains for fresh air, hiking trails, and breathtaking views. Cozy cabins and outdoor adventures await.',
+    descriptionFa:
+        'به کوهستان پناه ببرید برای هوای تازه، مسیرهای کوهنوردی و مناظر نفس‌گیر. کلبه‌های دنج و ماجراجویی‌های فضای باز در انتظار شماست.',
     price: 450,
     nights: 4,
     img: 'mountain.png',
     rating: 4.6,
     category: 'Mountain',
-    location: LanguageManager.currentLanguage == 'fa' ? 'آلپ سوئیس' : 'Swiss Alps',
-    features: LanguageManager.currentLanguage == 'fa'
-        ? ['کوهنوردی', 'اقامت در کلبه', 'آتش کمپ', 'حیات وحش']
-        : ['Hiking', 'Cabin Stay', 'Campfire', 'Wildlife'],
+    locationEn: 'Swiss Alps',
+    locationFa: 'آلپ سوئیس',
+    featuresEn: ['Hiking', 'Cabin Stay', 'Campfire', 'Wildlife'],
+    featuresFa: ['کوهنوردی', 'اقامت در کلبه', 'آتش کمپ', 'حیات وحش'],
     isPopular: false,
   ),
   Trip(
     id: '3',
-    title: LanguageManager.currentLanguage == 'fa' ? 'تور چراغان شهر' : 'City Lights Tour',
-    description: LanguageManager.currentLanguage == 'fa'
-        ? 'زندگی پر جنب‌وجوش شهری، نقاط دیدنی تاریخی و لذت‌های آشپزی را در یکی از هیجان‌انگیزترین شهرهای جهان کشف کنید.'
-        : 'Explore vibrant city life, historical landmarks, and culinary delights in one of the world\'s most exciting cities.',
+    titleEn: 'City Lights Tour',
+    titleFa: 'تور چراغان شهر',
+    descriptionEn:
+        'Explore vibrant city life, historical landmarks, and culinary delights in one of the world\'s most exciting cities.',
+    descriptionFa:
+        'زندگی پر جنب‌وجوش شهری، نقاط دیدنی تاریخی و لذت‌های آشپزی را در یکی از هیجان‌انگیزترین شهرهای جهان کشف کنید.',
     price: 550,
     nights: 5,
     img: 'city.png',
     rating: 4.7,
     category: 'City',
-    location: LanguageManager.currentLanguage == 'fa' ? 'نیویورک' : 'New York',
-    features: LanguageManager.currentLanguage == 'fa'
-        ? ['تورهای شهری', 'موزه‌ها', 'رستوران‌های عالی', 'خرید']
-        : ['City Tours', 'Museums', 'Fine Dining', 'Shopping'],
+    locationEn: 'New York',
+    locationFa: 'نیویورک',
+    featuresEn: ['City Tours', 'Museums', 'Fine Dining', 'Shopping'],
+    featuresFa: ['تورهای شهری', 'موزه‌ها', 'رستوران‌های عالی', 'خرید'],
     isPopular: true,
   ),
   Trip(
     id: '4',
-    title: LanguageManager.currentLanguage == 'fa' ? 'ماجراجویی بیابانی' : 'Desert Adventure',
-    description: LanguageManager.currentLanguage == 'fa'
-        ? 'جادوی بیابان را با سواری بر شتر، تماشای ستاره‌ها و تجربیات سنتی بادیه‌نشینان کشف کنید.'
-        : 'Discover the magic of the desert with camel rides, stargazing, and traditional Bedouin experiences.',
+    titleEn: 'Desert Adventure',
+    titleFa: 'ماجراجویی بیابانی',
+    descriptionEn:
+        'Discover the magic of the desert with camel rides, stargazing, and traditional Bedouin experiences.',
+    descriptionFa:
+        'جادوی بیابان را با سواری بر شتر، تماشای ستاره‌ها و تجربیات سنتی بادیه‌نشینان کشف کنید.',
     price: 400,
     nights: 3,
     img: 'desert.png',
     rating: 4.5,
     category: 'Desert',
-    location: LanguageManager.currentLanguage == 'fa' ? 'دبی' : 'Dubai',
-    features: LanguageManager.currentLanguage == 'fa'
-        ? ['سواری شتر', 'کمپ بیابانی', 'تماشای ستاره‌ها', 'شام باربیکیو']
-        : ['Camel Rides', 'Desert Camp', 'Stargazing', 'BBQ Dinner'],
+    locationEn: 'Dubai',
+    locationFa: 'دبی',
+    featuresEn: ['Camel Rides', 'Desert Camp', 'Stargazing', 'BBQ Dinner'],
+    featuresFa: ['سواری شتر', 'کمپ بیابانی', 'تماشای ستاره‌ها', 'شام باربیکیو'],
     isPopular: false,
   ),
   Trip(
     id: '5',
-    title: LanguageManager.currentLanguage == 'fa' ? 'رزورت اسکی' : 'Ski Resort',
-    description: LanguageManager.currentLanguage == 'fa'
-        ? 'در یکی از بهترین رزورت‌های اسکی با مربیان متخصص و کلبه‌های کوهستانی دنج اسکی کنید.'
-        : 'Hit the slopes at one of the best ski resorts with expert instructors and cozy mountain lodges.',
+    titleEn: 'Ski Resort',
+    titleFa: 'رزورت اسکی',
+    descriptionEn:
+        'Hit the slopes at one of the best ski resorts with expert instructors and cozy mountain lodges.',
+    descriptionFa:
+        'در یکی از بهترین رزورت‌های اسکی با مربیان متخصص و کلبه‌های کوهستانی دنج اسکی کنید.',
     price: 650,
     nights: 6,
     img: 'ski.png',
     rating: 4.9,
     category: 'Mountain',
-    location: LanguageManager.currentLanguage == 'fa' ? 'آسپن' : 'Aspen',
-    features: LanguageManager.currentLanguage == 'fa'
-        ? ['پاس اسکی', 'تجهیزات', 'کلاس‌های آموزشی', 'جکوزی']
-        : ['Ski Pass', 'Equipment', 'Lessons', 'Hot Tub'],
+    locationEn: 'Aspen',
+    locationFa: 'آسپن',
+    featuresEn: ['Ski Pass', 'Equipment', 'Lessons', 'Hot Tub'],
+    featuresFa: ['پاس اسکی', 'تجهیزات', 'کلاس‌های آموزشی', 'جکوزی'],
     isPopular: true,
   ),
   Trip(
     id: '6',
-    title: LanguageManager.currentLanguage == 'fa' ? 'جزیره گردی' : 'Island Hopping',
-    description: LanguageManager.currentLanguage == 'fa'
-        ? 'از چندین جزیره دیدن کنید که هر کدام جذابیت، فرهنگ و زیبایی طبیعی منحصربه‌فرد خود را دارند.'
-        : 'Visit multiple islands, each with its own unique charm, culture, and natural beauty.',
+    titleEn: 'Island Hopping',
+    titleFa: 'جزیره گردی',
+    descriptionEn:
+        'Visit multiple islands, each with its own unique charm, culture, and natural beauty.',
+    descriptionFa:
+        'از چندین جزیره دیدن کنید که هر کدام جذابیت، فرهنگ و زیبایی طبیعی منحصربه‌فرد خود را دارند.',
     price: 750,
     nights: 7,
     img: 'island.png',
     rating: 4.8,
     category: 'Island',
-    location: LanguageManager.currentLanguage == 'fa' ? 'فیلیپین' : 'Philippines',
-    features: LanguageManager.currentLanguage == 'fa'
-        ? ['تورهای قایقی', 'شیرجه', 'تور جزیره', 'غذای محلی']
-        : ['Boat Tours', 'Snorkeling', 'Island Tours', 'Local Food'],
+    locationEn: 'Philippines',
+    locationFa: 'فیلیپین',
+    featuresEn: ['Boat Tours', 'Snorkeling', 'Island Tours', 'Local Food'],
+    featuresFa: ['تورهای قایقی', 'شیرجه', 'تور جزیره', 'غذای محلی'],
     isPopular: true,
   ),
   Trip(
     id: '7',
-    title: LanguageManager.currentLanguage == 'fa' ? 'ساحل طلایی' : 'Golden Beach',
-    description: LanguageManager.currentLanguage == 'fa'
-        ? 'لذت بردن از سواحل طلایی و آب‌های فیروزه‌ای در یک محیط آرام و دنج.'
-        : 'Enjoy golden beaches and turquoise waters in a peaceful and cozy environment.',
+    titleEn: 'Golden Beach',
+    titleFa: 'ساحل طلایی',
+    descriptionEn:
+        'Enjoy golden beaches and turquoise waters in a peaceful and cozy environment.',
+    descriptionFa:
+        'لذت بردن از سواحل طلایی و آب‌های فیروزه‌ای در یک محیط آرام و دنج.',
     price: 280,
     nights: 2,
     img: 'beach.png',
     rating: 4.3,
     category: 'Beach',
-    location: LanguageManager.currentLanguage == 'fa' ? 'بانکوک' : 'Bangkok',
-    features: LanguageManager.currentLanguage == 'fa'
-        ? ['اقامت ساحلی', 'غذای محلی', 'تور قایق']
-        : ['Beach Stay', 'Local Food', 'Boat Tour'],
+    locationEn: 'Bangkok',
+    locationFa: 'بانکوک',
+    featuresEn: ['Beach Stay', 'Local Food', 'Boat Tour'],
+    featuresFa: ['اقامت ساحلی', 'غذای محلی', 'تور قایق'],
+    isPopular: false,
+  ),
+  Trip(
+    id: '8',
+    titleEn: 'Tropical Rainforest',
+    titleFa: 'جنگل بارانی استوایی',
+    descriptionEn:
+        'Immerse yourself in lush rainforests, exotic wildlife, and breathtaking waterfalls on this eco-adventure.',
+    descriptionFa:
+        'خود را در جنگل‌های انبوه، حیات وحش استوایی و آبشارهای خیره‌کننده غرق کنید.',
+    price: 480,
+    nights: 5,
+    img: 'mountain.png',
+    rating: 4.7,
+    category: 'Mountain',
+    locationEn: 'Costa Rica',
+    locationFa: 'کاستاریکا',
+    featuresEn: ['Guided Tours', 'Wildlife Watching', 'Zip Line', 'Eco Lodge'],
+    featuresFa: ['تورهای راهنمادار', 'تماشای حیات وحش', 'زیپ لاین', 'اکولوج'],
     isPopular: false,
   ),
 ];
