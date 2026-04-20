@@ -123,7 +123,7 @@ class DetailsScreen extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            ' / person',
+                            ' / ${LanguageManager.translate('perPerson')}',
                             style: TextStyle(fontSize: 12, color: Colors.grey[500]),
                           ),
                         ],

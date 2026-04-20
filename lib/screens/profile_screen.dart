@@ -5,6 +5,7 @@ import 'package:trips/screens/booking_history_screen.dart';
 import 'package:trips/screens/edit_profile_screen.dart';
 import 'package:trips/screens/favorites_screen.dart';
 import 'package:trips/screens/settings_screen.dart';
+import 'package:trips/utils/constants.dart';
 import 'package:trips/utils/language_manager.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -305,9 +306,9 @@ class ProfileScreen extends StatelessWidget {
         content: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            _helpItem(Icons.email_outlined, 'support@ninjatrips.com'),
+            _helpItem(Icons.email_outlined, AppConstants.supportEmail),
             _helpItem(Icons.phone_outlined, '+1 (800) NINJA-TRIP'),
-            _helpItem(Icons.language, 'www.ninjatrips.com'),
+            _helpItem(Icons.language, AppConstants.website),
           ],
         ),
         actions: [

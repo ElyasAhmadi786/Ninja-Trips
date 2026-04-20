@@ -38,6 +38,14 @@ class _BookingScreenState extends State<BookingScreen> {
 
   double get _totalPrice => widget.trip.price * _travelers;
 
+  String _formatDate(DateTime date) {
+    final months = [
+      'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+      'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+    ];
+    return '${date.day} ${months[date.month - 1]} ${date.year}';
+  }
+
   Future<void> _pickDate() async {
     final picked = await showDatePicker(
       context: context,
@@ -198,7 +206,7 @@ class _BookingScreenState extends State<BookingScreen> {
                           ),
                           const SizedBox(height: 4),
                           Text(
-                            widget.trip.formattedPrice + ' / person',
+                            widget.trip.formattedPrice + ' / ${LanguageManager.translate('perPerson')}',
                             style: TextStyle(
                               color: theme.primaryColor,
                               fontWeight: FontWeight.w700,
@@ -281,7 +289,7 @@ class _BookingScreenState extends State<BookingScreen> {
                             ),
                             const SizedBox(height: 2),
                             Text(
-                              '${_travelDate.day}/${_travelDate.month}/${_travelDate.year}',
+                              _formatDate(_travelDate),
                               style: const TextStyle(
                                 fontSize: 15,
                                 fontWeight: FontWeight.w600,

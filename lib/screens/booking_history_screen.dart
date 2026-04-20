@@ -84,6 +84,14 @@ class _BookingCard extends StatelessWidget {
     }
   }
 
+  String _formatDate(DateTime date) {
+    const months = [
+      'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+      'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+    ];
+    return '${date.day} ${months[date.month - 1]} ${date.year}';
+  }
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -177,7 +185,7 @@ class _BookingCard extends StatelessWidget {
                   context,
                   Icons.calendar_today,
                   LanguageManager.translate('travelDate'),
-                  '${booking.travelDate.day}/${booking.travelDate.month}/${booking.travelDate.year}',
+                  _formatDate(booking.travelDate),
                 ),
                 const SizedBox(width: 16),
                 _infoItem(
