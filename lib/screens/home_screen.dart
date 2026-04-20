@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:trips/screens/search_screen.dart';
 import 'package:trips/screens/favorites_screen.dart';
 import 'package:trips/screens/profile_screen.dart';
 import 'package:trips/widgets/trip_card.dart';
 import 'package:trips/utils/trip_data.dart';
 import 'package:trips/utils/language_manager.dart';
-import 'package:trips/providers/app_provider.dart';
 
 import '../models/trip.dart';
 
